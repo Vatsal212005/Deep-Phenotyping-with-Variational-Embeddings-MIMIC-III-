@@ -257,8 +257,6 @@ Outputs → `models/analysis/`:
   - Cluster 1 (small) shows extreme lab signatures (e.g., high lactate/creatinine/glucose).  
   - Anomaly score correlates with the same features → **method agreement** (robust signal).
 
-> Tip: Present **both** K=2 and K=3 (similar silhouettes). K=2 highlights a rare subgroup; K=3 can show a more nuanced gradient of phenotypes.
-
 ---
 
 ## 🧪 Validation & “Where are accuracy/F1?”
