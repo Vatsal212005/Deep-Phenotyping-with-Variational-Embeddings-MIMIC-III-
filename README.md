@@ -101,12 +101,12 @@ C:\Users\ironm\OneDrive\Desktop\Resume Project\Dataset\mimic-iii-clinical-databa
 ## 🧱 Pipeline Overview
 ```mermaid
 flowchart LR
-    A[Raw MIMIC-III tables: CHARTEVENTS, LABEVENTS, D_*] --> B[Preprocess: mimic_preprocess.py (24h window, scaling)]
-    B --> C[Sanity Checks: sanity_checks.py (missingness, variance, correlations, PCA)]
-    C --> D[VAE Training: vae_train.py (beta-VAE, MSE+KL, early-stop)]
-    D --> E[KMeans: unsup_baselines.py kmeans (elbow, silhouette, centroids)]
-    D --> F[IsoForest / LOF: unsup_baselines.py isoforest/lof (anomaly scores)]
-    E --> G[Analyze: unsup_baselines.py analyze (cluster top features)]
+    A[Raw MIMIC-III tables: CHARTEVENTS, LABEVENTS, D_*] --> B[Preprocess: mimic_preprocess.py - 24h window, scaling]
+    B --> C[Sanity Checks: sanity_checks.py - missingness, variance, correlations, PCA]
+    C --> D[VAE Training: vae_train.py - beta-VAE, MSE+KL, early-stop]
+    D --> E[KMeans: unsup_baselines.py kmeans - elbow, silhouette, centroids]
+    D --> F[IsoForest / LOF: unsup_baselines.py isoforest/lof - anomaly scores]
+    E --> G[Analyze: unsup_baselines.py analyze - cluster top features]
     F --> G
 ```
 
