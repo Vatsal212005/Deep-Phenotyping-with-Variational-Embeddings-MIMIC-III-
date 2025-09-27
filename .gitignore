@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+Dataset/
+mimic_outputs/
+mimic_reports/
+*.parquet
+*.csv
+
+# Models
+models/
+*.pt
+*.joblib
