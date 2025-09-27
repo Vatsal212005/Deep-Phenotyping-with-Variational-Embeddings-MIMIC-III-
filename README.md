@@ -99,18 +99,17 @@ C:\Users\ironm\OneDrive\Desktop\Resume Project\Dataset\mimic-iii-clinical-databa
 ---
 
 ## 🧱 Pipeline Overview
-
+```markdown
 ```mermaid
 flowchart LR
-    A[Raw MIMIC-III tables\nCHARTEVENTS, LABEVENTS, D_*] --> B[Preprocess\nmimic_preprocess.py\n24h window, unit hygiene,\nregex mapping, robust scaling]
-    B --> C[Sanity Checks\nsanity_checks.py\nmissingness, variance,\ncorrelations, PCA, plots]
-    C --> D[VAE Training\nvae_train.py\nβ-VAE (MSE+β·KL), early-stop,\nembeddings.csv, recon_error.csv]
-    D --> E[KMeans\nunsup_baselines.py kmeans\nelbow/silhouette, centroids]
-    D --> F[IsoForest / LOF\nunsup_baselines.py isoforest/lof\nanomaly_scores.csv]
-    E --> G[Analyze\nunsup_baselines.py analyze\ncluster top features]
+    A[Raw MIMIC-III tables: CHARTEVENTS, LABEVENTS, D_*] --> B[Preprocess: mimic_preprocess.py (24h window, scaling)]
+    B --> C[Sanity Checks: sanity_checks.py (missingness, variance, correlations, PCA)]
+    C --> D[VAE Training: vae_train.py (beta-VAE, early stop, embeddings.csv)]
+    D --> E[KMeans: unsup_baselines.py kmeans (elbow, silhouette, centroids)]
+    D --> F[IsoForest/LOF: unsup_baselines.py isoforest/lof (anomaly_scores.csv)]
+    E --> G[Analyze: unsup_baselines.py analyze (cluster features)]
     F --> G
 ```
-
 ---
 
 ## 🚀 How to Run (copy-paste commands)
